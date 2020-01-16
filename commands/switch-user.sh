@@ -3,9 +3,6 @@ function adb-switch-user {
 }
 
 function adb-switch-user-all {
-	for device in $(connected-devices)
-	do
-		adb-switch-user $device $1
-	done
+	adb-all shell am switch-user $2
 }
 
